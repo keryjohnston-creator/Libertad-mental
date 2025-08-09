@@ -1,21 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Libertad Mental</title>
+  <link rel="icon" href="logo of sin fondo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: serif;
+      background-color: #e6ccff;
+      color: #000;
+    }
+
+    nav {
+      background-color: #4b0082;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      display: none;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
+    header {
+      background-color: #d1b3ff;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 4px solid #b388ff;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #4b0082;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-top: 15px;
+    }
+
+    h2 {
+      color: #5a2d82;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .links a {
+      display: block;
+      margin: 10px 0;
+      color: #4b0082;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .contacto {
+      background-color: #f3e5ff;
+      padding: 30px 20px;
+      margin-top: 40px;
+      border-top: 2px solid #b388ff;
+      color: #4b0082;
+    }
+
+    .contacto a {
+      color: #4b0082;
+      text-decoration: none;
+    }
+
+    .contacto a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    window.onload = () => {
+      showSection('inicio');
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <center>
-        <img src="descarga.png" height="180" width="200">
-        </center>
-            <nav>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="galeria.html">Galeria</a></li>
-        <li><a href="sucursales.html">Sucursales</a></li>
-        <li><a href="contac.html">Contactanos</a></li>
-            </nav>
+
+  <!-- Encabezado -->
+  <header>
+    <h1>Libertad Mental</h1>
+    <img src="logo of sin fondo.png" alt="Logo Libertad Mental" class="logo">
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#" onclick="showSection('inicio')">Inicio</a>
+    <a href="#" onclick="showSection('quienes')">Quiénes somos</a>
+    <a href="#" onclick="showSection('documentos')">Documentos</a>
+    <a href="#" onclick="showSection('contacto')">Contáctanos</a>
+  </nav>
+
+  <!-- Sección Inicio -->
+  <div id="inicio" class="section active">
+    <h2>Bienvenido a Libertad Mental</h2>
+    <p>Un espacio para compartir conocimientos, recursos y apoyo sobre salud mental.</p>
+  </div>
             </header>
 </body>
+
 </html>
